@@ -1,5 +1,9 @@
 # Parse data URL string
 
+[![Build Status](https://travis-ci.org/killmenot/parse-data-url.svg?branch=master)](https://travis-ci.org/killmenot/parse-data-url)
+[![Dependency Status](https://gemnasium.com/badges/github.com/killmenot/parse-data-url.svg)](https://gemnasium.com/github.com/killmenot/parse-data-url)
+[![npm version](https://badge.fury.io/js/parse-data-url.svg)](https://badge.fury.io/js/parse-data-url)
+
 ## Install
 
 ```
@@ -29,6 +33,7 @@ var parsed = parseDataUrl('data:image/svg+xml;charset=UTF-8,some-data');
 // }
 
 ```
+
 
 ## Licence
 

@@ -10,7 +10,7 @@ module.exports = function (s) {
     return false;
   }
 
-  parts = s.match(/^\s*data:([a-z]+\/[a-z0-9\-\+]+(;[a-z\-]+\=[a-z0-9\-]+)?)?(;base64)?,([a-z0-9\!\$\&\'\,\(\)\*\+\,\;\=\-\.\_\~\:\@\/\?\%\s]*?)\s*$/i);
+  parts = s.match(validDataUrl.regex);
   parsed = {};
 
   if (parts[1]) {
