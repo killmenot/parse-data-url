@@ -1,0 +1,42 @@
+{
+  "name": "parse-data-url",
+  "version": "0.1.0",
+  "description": "Parse data URL string",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt && mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:killmenot/parse-data-url.git"
+  },
+  "keywords": [
+    "parse",
+    "data-uri",
+    "data-url",
+    "data",
+    "uri",
+    "url",
+    "datauri",
+    "dataurl"
+  ],
+  "author": {
+    "name": "Alexey Kucherenko",
+    "url": "https://github.com/killmenot"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/killmenot/parse-data-url/issues"
+  },
+  "homepage": "https://github.com/killmenot/parse-data-url",
+  "dependencies": {
+    "valid-data-url": "^0.1.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "load-grunt-tasks": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
