@@ -27,5 +27,9 @@ module.exports = function (s) {
     parsed.data = parts[4];
   }
 
+  parsed.toBuffer = function() {
+    return new Buffer(parsed.data, parsed.base64 ? 'base64' : 'utf8');
+  };
+
   return parsed;
 };
