@@ -1,6 +1,6 @@
 {
   "name": "parse-data-url",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Parse data URL string",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,7 @@
     "valid-data-url": "^0.1.1"
   },
   "devDependencies": {
+    "buffer-equals": "^1.0.3",
     "chai": "^3.5.0",
     "grunt": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",

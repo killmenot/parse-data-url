@@ -5,6 +5,7 @@
 
 var parseDataUrl = require('./');
 var expect = require('chai').expect;
+var bufferEquals = require('buffer-equals');
 
 describe('module', function () {
   var parsed;
@@ -71,6 +72,6 @@ describe('module', function () {
     parsed = parseDataUrl('data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D');
     var buffer = new Buffer(parsed.data, 'base64');
     var parsedBuffer = parsed.toBuffer();
-    expect(buffer.equals(parsedBuffer)).to.be.true;
+    expect(bufferEquals(buffer, parsedBuffer)).to.be.true;
   });
 });

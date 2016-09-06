@@ -35,6 +35,18 @@ var parsed = parseDataUrl('data:image/svg+xml;charset=UTF-8,some-data');
 ```
 
 
+## Methods
+
+### toBuffer()
+
+Returns data as `Buffer`. If `parsed.base64` equals `true` `base64` is used as encoding, otherwise `utf8`.
+
+
+## Contributors
+
+[List of project's contributors!](CONTRIBUTORS.md)
+
+
 ## Licence
 
 The MIT License (MIT)
