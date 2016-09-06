@@ -66,4 +66,11 @@ describe('module', function () {
     expect(parsed.charset).to.equal('utf-8');
     expect(parsed.data).to.equal('%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20fill%3D%22%2300B1FF%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3C%2Fsvg%3E');
   });
+
+  it('export buffer from parsed data', function () {
+    parsed = parseDataUrl('data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D');
+    var buffer = new Buffer(parsed.data, 'base64');
+    var parsedBuffer = parsed.toBuffer();
+    expect(buffer.equals(parsedBuffer)).to.be.true;
+  });
 });
