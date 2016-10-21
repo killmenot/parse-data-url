@@ -1,4 +1,10 @@
 
+<a name="0.1.4"></a>
+### 0.1.4 (2016-10-22)
+
+* update `valid-data-url` package version, accept types with a `.` character
+
+
 <a name="0.1.3"></a>
 ### 0.1.3 (2016-10-21)
 

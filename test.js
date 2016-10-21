@@ -59,6 +59,15 @@ describe('module', function () {
     expect(parsed.data).to.equal('PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCBmaWxsPSIjMDBCMUZGIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIvPjwvc3ZnPg==');
   });
 
+  it('parse data with media types that contain .', function () {
+    parsed = parseDataUrl('data:application/vnd.ms-excel;base64,PGh0bWw%2BPC9odG1sPg%3D%3D');
+    expect(parsed).to.be.an('object');
+    expect(parsed.mediaType).to.equal('application/vnd.ms-excel');
+    expect(parsed.base64).to.be.true;
+    expect(parsed.charset).to.be.undefined;
+    expect(parsed.data).to.equal('PGh0bWw%2BPC9odG1sPg%3D%3D');
+  });
+
   it('parse data with complex media type and charset', function () {
     parsed = parseDataUrl('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20fill%3D%22%2300B1FF%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3C%2Fsvg%3E');
     expect(parsed).to.be.an('object');
