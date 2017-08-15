@@ -1,6 +1,7 @@
 # Parse data URL string
 
 [![Build Status](https://travis-ci.org/killmenot/parse-data-url.svg?branch=master)](https://travis-ci.org/killmenot/parse-data-url)
+[![Coverage Status](https://coveralls.io/repos/github/killmenot/parse-data-url/badge.svg?branch=master)](https://coveralls.io/github/killmenot/parse-data-url?branch=master)
 [![Dependency Status](https://gemnasium.com/badges/github.com/killmenot/parse-data-url.svg)](https://gemnasium.com/github.com/killmenot/parse-data-url)
 [![npm version](https://badge.fury.io/js/parse-data-url.svg)](https://badge.fury.io/js/parse-data-url)
 

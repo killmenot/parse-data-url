@@ -14,6 +14,11 @@ describe('module', function () {
     expect(parseDataUrl).to.be.a('function');
   });
 
+  it('return false', function () {
+    parsed = parseDataUrl('data:HelloWorld');
+    expect(parsed).to.be.false;
+  });
+
   it('parse data', function () {
     parsed = parseDataUrl('data:,Hello World!');
     expect(parsed).to.be.an('object');
@@ -77,9 +82,16 @@ describe('module', function () {
     expect(parsed.data).to.equal('%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20fill%3D%22%2300B1FF%22%20width%3D%22100%22%20height%3D%22100%22%2F%3E%3C%2Fsvg%3E');
   });
 
-  it('export buffer from parsed data', function () {
+  it('export buffer from parsed data with base64', function () {
     parsed = parseDataUrl('data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D');
     var buffer = new Buffer(parsed.data, 'base64');
+    var parsedBuffer = parsed.toBuffer();
+    expect(bufferEquals(buffer, parsedBuffer)).to.be.true;
+  });
+
+  it('export buffer from parsed data with utf-8', function () {
+    parsed = parseDataUrl('data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E');
+    var buffer = new Buffer(parsed.data, 'utf8');
     var parsedBuffer = parsed.toBuffer();
     expect(bufferEquals(buffer, parsedBuffer)).to.be.true;
   });
