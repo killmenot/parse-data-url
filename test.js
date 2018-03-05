@@ -14,7 +14,12 @@ describe('module', function () {
     expect(parseDataUrl).to.be.a('function');
   });
 
-  it('return false', function () {
+  it('return false when no argument passed', function () {
+    parsed = parseDataUrl();
+    expect(parsed).to.be.false;
+  });
+
+  it('return false when invalid data url', function () {
     parsed = parseDataUrl('data:HelloWorld');
     expect(parsed).to.be.false;
   });
@@ -44,6 +49,15 @@ describe('module', function () {
     expect(parsed.base64).to.be.false;
     expect(parsed.charset).to.be.undefined;
     expect(parsed.data).to.equal('%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E');
+  });
+
+  it('parse with empty data ', function () {
+    parsed = parseDataUrl('data:,');
+    expect(parsed).to.be.an('object');
+    expect(parsed.mediaType).to.be.undefined;
+    expect(parsed.base64).to.be.false;
+    expect(parsed.charset).to.be.undefined;
+    expect(parsed.data).to.equal('');
   });
 
   it('parse base64 encoded data with simple media type', function () {
@@ -91,6 +105,13 @@ describe('module', function () {
 
   it('export buffer from parsed data with utf-8', function () {
     parsed = parseDataUrl('data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E');
+    var buffer = new Buffer(parsed.data, 'utf8');
+    var parsedBuffer = parsed.toBuffer();
+    expect(bufferEquals(buffer, parsedBuffer)).to.be.true;
+  });
+
+  it('export buffer from parsed data with empty data', function () {
+    parsed = parseDataUrl('data:,');
     var buffer = new Buffer(parsed.data, 'utf8');
     var parsedBuffer = parsed.toBuffer();
     expect(bufferEquals(buffer, parsedBuffer)).to.be.true;
