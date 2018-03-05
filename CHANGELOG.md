@@ -1,3 +1,12 @@
+# CHANGELOG
+
+<a name="0.1.6"></a>
+### 0.1.6 (2018-03-06)
+
+* avoid of using Buffer.new in Node 6+
+* fix a problem when data is empty
+* bump deps
+
 
 <a name="0.1.5"></a>
 ### 0.1.5 (2017-08-15)
