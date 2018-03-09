@@ -1,5 +1,12 @@
 # CHANGELOG
 
+<a name="0.2.0"></a>
+### 0.2.0 (2018-03-09)
+
+* add contentType property that contains only `type "/" subtype`
+* support multiple media type parameters exposed via properties
+
+
 <a name="0.1.6"></a>
 ### 0.1.6 (2018-03-06)
 

@@ -1,6 +1,6 @@
 {
   "name": "parse-data-url",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Parse data URL string",
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/killmenot/parse-data-url",
   "dependencies": {
-    "valid-data-url": "^0.1.5"
+    "valid-data-url": "^0.1.6"
   },
   "devDependencies": {
     "buffer-equals": "^1.0.4",
