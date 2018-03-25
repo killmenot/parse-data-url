@@ -26,13 +26,14 @@ var parsed = parseDataUrl('data:invalid');
 
 // Valid
 var parsed = parseDataUrl('data:image/svg+xml;charset=UTF-8,some-data'); 
-// {
-//    mediaType: 'image/svg+xml;charset=utf-8',
-//    charset: 'utf-8',
-//    base64: false,
-//    data: 'some-data'
-// }
 
+console.log(parsed);
+// { mediaType: 'image/svg+xml;charset=utf-8',
+//  contentType: 'image/svg+xml',
+//  charset: 'utf-8',
+//  base64: false,
+//  data: 'some-data',
+//  toBuffer: [Function] }
 ```
 
 
