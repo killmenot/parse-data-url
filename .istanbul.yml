@@ -1,2 +1,4 @@
 instrumentation:
-  excludes: ['test.js']
+  extensions:
+    - .js
+  excludes: ['Gruntfile.js', test.js']
