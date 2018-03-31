@@ -49,6 +49,10 @@ Returns data as `Buffer`. If `parsed.base64` equals `true` `base64` is used as e
 [List of project's contributors!](CONTRIBUTORS.md)
 
 
+## Alternatives
+
+  - [data-urls](https://github.com/jsdom/data-urls)
+
 ## Licence
 
 The MIT License (MIT)
