@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/killmenot/parse-data-url.svg?branch=master)](https://travis-ci.org/killmenot/parse-data-url)
 [![Coverage Status](https://coveralls.io/repos/github/killmenot/parse-data-url/badge.svg?branch=master)](https://coveralls.io/github/killmenot/parse-data-url?branch=master)
-[![Dependency Status](https://gemnasium.com/badges/github.com/killmenot/parse-data-url.svg)](https://gemnasium.com/github.com/killmenot/parse-data-url)
+[![Dependency Status](https://david-dm.org/killmenot/parse-data-url.svg)](https://david-dm.org/killmenot/parse-data-url.svg)
 [![npm version](https://badge.fury.io/js/parse-data-url.svg)](https://badge.fury.io/js/parse-data-url)
 
 ## Install
@@ -18,14 +18,14 @@ npm install parse-data-url
 ```javascript
 'use strict';
 
-var parseDataUrl = require('parse-data-url');
+const parseDataUrl = require('parse-data-url');
 
 // Invalid
-var parsed = parseDataUrl('data:invalid');
+const parsed = parseDataUrl('data:invalid');
 // false
 
 // Valid
-var parsed = parseDataUrl('data:image/svg+xml;charset=UTF-8,some-data'); 
+const parsed = parseDataUrl('data:image/svg+xml;charset=UTF-8,some-data'); 
 
 console.log(parsed);
 // { mediaType: 'image/svg+xml;charset=utf-8',
@@ -51,7 +51,8 @@ Returns data as `Buffer`. If `parsed.base64` equals `true` `base64` is used as e
 
 ## Alternatives
 
-  - [data-urls](https://github.com/jsdom/data-urls)
+ - [data-urls](https://github.com/jsdom/data-urls)
+
 
 ## Licence
 
