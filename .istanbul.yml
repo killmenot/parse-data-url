@@ -1,4 +1,0 @@
-instrumentation:
-  extensions:
-    - .js
-  excludes: ['Gruntfile.js', test.js']

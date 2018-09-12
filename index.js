@@ -1,29 +1,25 @@
 'use strict';
 
-var validDataUrl = require('valid-data-url');
-var NODE_MAJOR_VERSION = parseInt(process.version.slice(1), 10);
+const validDataUrl = require('valid-data-url');
+const toBuffer = require('./to-buffer');
 
-module.exports = function (s) {
-  var parts;
-  var mediaTypeParts;
-  var parsed;
-
+module.exports = (s) => {
   if (!validDataUrl(s)) {
     return false;
   }
 
-  parts = s.trim().match(validDataUrl.regex);
-  parsed = {};
+  const parts = s.trim().match(validDataUrl.regex);
+  const parsed = {};
 
   if (parts[1]) {
     parsed.mediaType = parts[1].toLowerCase();
 
-    mediaTypeParts = parts[1].split(';').map(function (s) { return s.toLowerCase(); });
+    const mediaTypeParts = parts[1].split(';').map(x => x.toLowerCase());
 
     parsed.contentType = mediaTypeParts[0];
 
-    mediaTypeParts.slice(1).forEach(function (attribute) {
-      var p = attribute.split('=');
+    mediaTypeParts.slice(1).forEach((attribute) => {
+      const p = attribute.split('=');
       parsed[p[0]] = p[1];
     });
   }
@@ -31,15 +27,9 @@ module.exports = function (s) {
   parsed.base64 = !!parts[parts.length - 2];
   parsed.data = parts[parts.length - 1] || '';
 
-  parsed.toBuffer = function () {
-    // new Buffer(string[, encoding]) is deprecated since: v6.0.0
-    // https://nodejs.org/docs/latest-v6.x/api/buffer.html#buffer_new_buffer_string_encoding
-
-    var encoding = parsed.base64 ? 'base64' : 'utf8';
-
-    return NODE_MAJOR_VERSION >= 6 ?
-      Buffer.from(parsed.data, encoding) :
-      new Buffer(parsed.data, encoding);
+  parsed.toBuffer = () => {
+    const encoding = parsed.base64 ? 'base64' : 'utf8';
+    return toBuffer(parsed.data, encoding);
   };
 
   return parsed;
