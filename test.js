@@ -1,9 +1,7 @@
 'use strict';
 
 const parseDataUrl = require('./');
-const toBuffer = require('./to-buffer');
 const expect = require('chai').expect;
-const bufferEquals = require('buffer-equals');
 
 describe('parse-data-url', () => {
   let parsed;
@@ -115,22 +113,22 @@ describe('parse-data-url', () => {
 
   it('export buffer from parsed data with base64', () => {
     parsed = parseDataUrl('data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D');
-    var buffer = toBuffer(parsed.data, 'base64');
-    var parsedBuffer = parsed.toBuffer();
-    expect(bufferEquals(buffer, parsedBuffer)).equal(true);
+    const buffer = Buffer.from(parsed.data, 'base64');
+    const parsedBuffer = parsed.toBuffer();
+    expect(buffer.equals(parsedBuffer)).equal(true);
   });
 
   it('export buffer from parsed data with utf-8', () => {
     parsed = parseDataUrl('data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E');
-    var buffer = toBuffer(parsed.data, 'utf8');
-    var parsedBuffer = parsed.toBuffer();
-    expect(bufferEquals(buffer, parsedBuffer)).equal(true);
+    const buffer = Buffer.from(parsed.data, 'utf8');
+    const parsedBuffer = parsed.toBuffer();
+    expect(buffer.equals(parsedBuffer)).equal(true);
   });
 
   it('export buffer from parsed data with empty data', () => {
     parsed = parseDataUrl('data:,');
-    var buffer = toBuffer(parsed.data, 'utf8');
-    var parsedBuffer = parsed.toBuffer();
-    expect(bufferEquals(buffer, parsedBuffer)).equal(true);
+    const buffer = Buffer.from(parsed.data, 'utf8');
+    const parsedBuffer = parsed.toBuffer();
+    expect(buffer.equals(parsedBuffer)).equal(true);
   });
 });

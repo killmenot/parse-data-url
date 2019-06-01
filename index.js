@@ -1,7 +1,6 @@
 'use strict';
 
 const validDataUrl = require('valid-data-url');
-const toBuffer = require('./to-buffer');
 
 module.exports = (s) => {
   if (!validDataUrl(s)) {
@@ -29,7 +28,8 @@ module.exports = (s) => {
 
   parsed.toBuffer = () => {
     const encoding = parsed.base64 ? 'base64' : 'utf8';
-    return toBuffer(parsed.data, encoding);
+
+    return Buffer.from(parsed.data, encoding);
   };
 
   return parsed;

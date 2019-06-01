@@ -7,6 +7,9 @@
     "url": "https://github.com/killmenot"
   },
   "main": "index.js",
+  "engines": {
+    "node": ">=8"
+  },
   "license": "MIT",
   "homepage": "https://github.com/killmenot/parse-data-url",
   "repository": {
@@ -27,7 +30,7 @@
     "dataurl"
   ],
   "scripts": {
-    "lint": "jshint index.js to-buffer.js test.js",
+    "lint": "jshint index.js test.js",
     "test": "mocha",
     "coverage": "nyc --reporter=html --reporter=text mocha",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
@@ -40,20 +43,17 @@
     "all": true,
     "include": [
       "index.js"
-    ],
-    "exclude": [
-      "test.js"
     ]
   },
   "dependencies": {
-    "valid-data-url": "^1.0.0"
+    "valid-data-url": "^2.0.0"
   },
   "devDependencies": {
-    "buffer-equals": "^1.0.4",
-    "chai": "^4.1.2",
-    "coveralls": "^3.0.2",
-    "mocha": "^5.2.0",
-    "nyc": "^13.0.1",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.3",
+    "jshint": "^2.10.2",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
     "pre-commit": "^1.2.2"
   }
 }
