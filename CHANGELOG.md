@@ -1,5 +1,12 @@
 # CHANGELOG
 
+<a name="2.0.0"></a>
+### 2.0.0 (2019-06-02)
+
+* drops support for Node less than 8.
+* refactoring, bump deps
+
+
 <a name="1.0.0"></a>
 ### 1.0.0 (2018-09-12)
 
