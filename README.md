@@ -1,9 +1,7 @@
 # Parse data URL string
 
-[![Build Status](https://travis-ci.org/killmenot/parse-data-url.svg?branch=master)](https://travis-ci.org/killmenot/parse-data-url)
-[![Coverage Status](https://coveralls.io/repos/github/killmenot/parse-data-url/badge.svg?branch=master)](https://coveralls.io/github/killmenot/parse-data-url?branch=master)
-[![Dependency Status](https://david-dm.org/killmenot/parse-data-url.svg)](https://david-dm.org/killmenot/parse-data-url.svg)
-[![npm version](https://badge.fury.io/js/parse-data-url.svg)](https://badge.fury.io/js/parse-data-url)
+[![Build Status](https://travis-ci.org/killmenot/parse-data-url.svg?branch=master)](https://travis-ci.org/killmenot/parse-data-url) [![Coverage Status](https://coveralls.io/repos/github/killmenot/parse-data-url/badge.svg?branch=master)](https://coveralls.io/github/killmenot/parse-data-url?branch=master) [![Dependency Status](https://david-dm.org/killmenot/parse-data-url.svg)](https://david-dm.org/killmenot/parse-data-url) [![npm version](https://img.shields.io/npm/v/parse-data-url.svg)](https://www.npmjs.com/package/parse-data-url) [![Known Vulnerabilities](https://snyk.io/test/github/killmenot/parse-data-url/badge.svg?targetFile=package.json)](https://snyk.io/test/github/killmenot/parse-data-url?targetFile=package.json)
+
 
 ## Install
 
