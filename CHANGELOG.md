@@ -1,5 +1,12 @@
 # CHANGELOG
 
+<a name="3.0.0"></a>
+### 3.0.0 (2019-09-05)
+
+* drops support for Node less than 10.
+* bump deps
+
+
 <a name="2.0.0"></a>
 ### 2.0.0 (2019-06-02)
 
