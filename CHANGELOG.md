@@ -1,5 +1,11 @@
 # CHANGELOG
 
+<a name="4.0.1"></a>
+### 4.0.1 (2021-05-09)
+
+* chore: publish only index.js
+
+
 <a name="4.0.0"></a>
 ### 4.0.0 (2021-05-09)
 
