@@ -1,6 +1,12 @@
 # Parse data URL string
 
-[![Build Status](https://travis-ci.org/killmenot/parse-data-url.svg?branch=master)](https://travis-ci.org/killmenot/parse-data-url) [![Coverage Status](https://coveralls.io/repos/github/killmenot/parse-data-url/badge.svg?branch=master)](https://coveralls.io/github/killmenot/parse-data-url?branch=master) [![Dependency Status](https://david-dm.org/killmenot/parse-data-url.svg)](https://david-dm.org/killmenot/parse-data-url) [![npm version](https://img.shields.io/npm/v/parse-data-url.svg)](https://www.npmjs.com/package/parse-data-url) [![Known Vulnerabilities](https://snyk.io/test/github/killmenot/parse-data-url/badge.svg?targetFile=package.json)](https://snyk.io/test/github/killmenot/parse-data-url?targetFile=package.json)
+[![Build Status](https://travis-ci.org/killmenot/parse-data-url.svg?branch=master)](https://travis-ci.org/killmenot/parse-data-url)
+[![Coverage Status](https://coveralls.io/repos/github/killmenot/parse-data-url/badge.svg?branch=master)](https://coveralls.io/github/killmenot/parse-data-url?branch=master)
+[![Dependency Status](https://status.david-dm.org/gh/killmenot/parse-data-url.svg)](https://david-dm.org/killmenot/parse-data-url)
+[![Dev Dependency Status](https://status.david-dm.org/gh/killmenot/parse-data-url.svg?type=dev)](https://david-dm.org/killmenot/parse-data-url)
+[![npm version](https://img.shields.io/npm/v/parse-data-url.svg)](https://www.npmjs.com/package/parse-data-url)
+[![npm](https://img.shields.io/npm/dm/parse-data-url.svg)](https://www.npmjs.com/package/parse-data-url)
+[![Known Vulnerabilities](https://snyk.io/test/github/killmenot/parse-data-url/badge.svg?targetFile=package.json)](https://snyk.io/test/github/killmenot/parse-data-url?targetFile=package.json)
 
 
 ## Install
