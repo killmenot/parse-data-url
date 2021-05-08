@@ -7,6 +7,9 @@
     "url": "https://github.com/killmenot"
   },
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "engines": {
     "node": ">=8"
   },
