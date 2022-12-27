@@ -29,7 +29,7 @@ module.exports = (s) => {
   parsed.toBuffer = () => {
     const encoding = parsed.base64 ? 'base64' : 'utf8';
 
-    return Buffer.from(parsed.data, encoding);
+    return Buffer.from(parsed.base64 ? parsed.data : decodeURIComponent(parsed.data), encoding);
   };
 
   return parsed;
