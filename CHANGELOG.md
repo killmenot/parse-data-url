@@ -1,5 +1,11 @@
 # CHANGELOG
 
+<a name="5.0.0"></a>
+### 5.0.5 (2022-12-31)
+
+* BREAKING: `toBuffer()` returns decoded data now if it was encoded
+
+
 <a name="4.0.1"></a>
 ### 4.0.1 (2021-05-09)
 
