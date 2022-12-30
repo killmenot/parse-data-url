@@ -48,6 +48,7 @@ describe('parse-data-url', () => {
     expect(parsed.base64).equal(false);
     expect(parsed.charset).be.an('undefined');
     expect(parsed.data).to.equal('%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E');
+    expect(parsed.toBuffer().toString()).to.equal('<h1>Hello, World!</h1>');
   });
 
   it('parse with empty data ', () => {
@@ -120,9 +121,8 @@ describe('parse-data-url', () => {
 
   it('export buffer from parsed data with utf-8', () => {
     parsed = parseDataUrl('data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E');
-    const buffer = Buffer.from(parsed.data, 'utf8');
     const parsedBuffer = parsed.toBuffer();
-    expect(buffer.equals(parsedBuffer)).equal(true);
+    expect(parsedBuffer.toString()).to.equal('<h1>Hello, World!</h1>');
   });
 
   it('export buffer from parsed data with empty data', () => {
