@@ -1,7 +1,15 @@
 # CHANGELOG
 
+<a name="6.0.0"></a>
+### 6.0.0 (2023-08-08)
+
+* chore: drops support for Node less than 14.
+* chore: bump deps
+* build: use GitHub Actions
+
+
 <a name="5.0.0"></a>
-### 5.0.5 (2022-12-31)
+### 5.0.0 (2022-12-31)
 
 * BREAKING: `toBuffer()` returns decoded data now if it was encoded
 
