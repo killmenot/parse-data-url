@@ -11,7 +11,7 @@
     "index.js"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=14"
   },
   "license": "MIT",
   "homepage": "https://github.com/killmenot/parse-data-url",
