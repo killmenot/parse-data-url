@@ -23,20 +23,20 @@ describe('parse-data-url', () => {
   it('parse data', () => {
     parsed = parseDataUrl('data:,Hello World!');
     expect(parsed).to.be.an('object');
-    expect(parsed.mediaType).be.an('undefined');
-    expect(parsed.contentType).be.an('undefined');
+    expect(parsed.mediaType).equal('text/plain;charset=us-ascii');
+    expect(parsed.contentType).equal('text/plain');
     expect(parsed.base64).equal(false);
-    expect(parsed.charset).be.an('undefined');
+    expect(parsed.charset).equal('us-ascii');
     expect(parsed.data).to.equal('Hello World!');
   });
 
   it('parse data with trailing spaces', () => {
     parsed = parseDataUrl(' data:,Hello World! ');
     expect(parsed).to.be.an('object');
-    expect(parsed.mediaType).be.an('undefined');
-    expect(parsed.contentType).be.an('undefined');
+    expect(parsed.mediaType).equal('text/plain;charset=us-ascii');
+    expect(parsed.contentType).equal('text/plain');
     expect(parsed.base64).equal(false);
-    expect(parsed.charset).be.an('undefined');
+    expect(parsed.charset).equal('us-ascii');
     expect(parsed.data).to.equal('Hello World!');
   });
 
@@ -51,13 +51,13 @@ describe('parse-data-url', () => {
     expect(parsed.toBuffer().toString()).to.equal('<h1>Hello, World!</h1>');
   });
 
-  it('parse with empty data ', () => {
+  it('parse with empty data', () => {
     parsed = parseDataUrl('data:,');
     expect(parsed).to.be.an('object');
-    expect(parsed.mediaType).be.an('undefined');
-    expect(parsed.contentType).be.an('undefined');
+    expect(parsed.mediaType).equal('text/plain;charset=us-ascii');
+    expect(parsed.contentType).equal('text/plain');
     expect(parsed.base64).equal(false);
-    expect(parsed.charset).be.an('undefined');
+    expect(parsed.charset).equal('us-ascii');
     expect(parsed.data).to.equal('');
   });
 

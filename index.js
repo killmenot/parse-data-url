@@ -10,18 +10,16 @@ module.exports = (s) => {
   const parts = s.trim().match(validDataUrl.regex);
   const parsed = {};
 
-  if (parts[1]) {
-    parsed.mediaType = parts[1].toLowerCase();
+  const mediaType = parts[1] || 'text/plain;charset=us-ascii';
+  parsed.mediaType = mediaType.toLowerCase();
 
-    const mediaTypeParts = parts[1].split(';').map(x => x.toLowerCase());
+  const mediaTypeParts = mediaType.split(';').map(x => x.toLowerCase());
+  parsed.contentType = mediaTypeParts[0];
 
-    parsed.contentType = mediaTypeParts[0];
-
-    mediaTypeParts.slice(1).forEach((attribute) => {
-      const p = attribute.split('=');
-      parsed[p[0]] = p[1];
-    });
-  }
+  mediaTypeParts.slice(1).forEach((attribute) => {
+    const p = attribute.split('=');
+    parsed[p[0]] = p[1];
+  });
 
   parsed.base64 = !!parts[parts.length - 2];
   parsed.data = parts[parts.length - 1] || '';
